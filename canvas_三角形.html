@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <canvas id="cc" >
+
+    </canvas>
+    <script>
+        var c=document.getElementById("cc");
+        var t= c.getContext("2d");
+        t.moveTo(10,10);
+        t.lineTo(30,30);
+        t.lineTo(10,30);
+        t.lineTo(10,10);
+        t.fill();
+    </script>
+</body>
+</html>
