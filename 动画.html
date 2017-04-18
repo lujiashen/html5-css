@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .kuai {
+            position: relative;;
+            width: 100px;
+            height: 100px;
+            /*background: BLUE;*/
+            -webkit-animation: donghua 2s;
+            -webkit-animation-direction:normal;         /*颠倒播放 奇数正向 偶数负向*/
+            -webkit-animation-iteration-count: infinite;   /*播放次数*/
+        }
+
+        @-webkit-keyframes donghua /* Safari 和 Chrome */
+        {
+            0%   {background: red; left:0px; top:0px;}
+            25%  {background: yellow; left:200px; top:0px;}
+            50%  {background: blue; left:200px; top:200px;}
+            75%  {background: green; left:0px; top:200px;}
+            100% {background: red; left:0px; top:0px;}
+        }
+
+    </style>
+</head>
+<body>
+    <div class="kuai"></div>
+</body>
+</html>
