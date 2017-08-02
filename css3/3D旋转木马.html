@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            perspective: 1000px;
+            perspective-origin:50% -500px;
+
+        }
+        #container {
+            width: 125px;
+            height: 125px;
+            position: relative;
+            margin: 200px auto;
+            transform-style: preserve-3d;
+            /*background: #ff0000;*/
+            transition: all 1s linear;
+        }
+        img {
+            width: 125px;
+            height: 125px;
+            position: absolute;
+            transition: all 1s linear;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+    <script>
+        var oCon=document.getElementById("container");
+        var counter=0;
+        for(var i=0;i<9;i++) {
+            var oImg=new Image();
+            oImg.onload=function() {
+                counter++;
+                if(counter==9) {
+                    loadSuccess();
+                }
+            };
+            oImg.src="../Images/"+(i+1)+'.jpg';
+            oCon.appendChild(oImg);
+        }
+        var num=0;
+        oCon.onclick=function() {
+            num++;
+            oCon .style.transform = "rotateY("+ num * 40 +"deg)";
+            console.log("haha");
+        };
+       function loadSuccess() {
+            var aImg=document.getElementsByTagName("img");
+            for(var i=0;i<aImg.length;i++) {
+                aImg[i].style.transitionDelay=i*100+"ms";
+                aImg[i].style.transform="rotateY("+(i+1)*40+"deg) translateZ(180px)";
+            }
+       }
+    </script>
+
+</body>
+</html>

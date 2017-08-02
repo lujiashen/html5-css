@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        #container {
+            width: 500px;
+            margin: 200px auto;
+            position: relative;
+        }
+        #container img {
+            border: 10px solid #ccc;
+            position: absolute;
+            top: 0;
+            left: 0;
+            box-shadow: 10px 10px 10px rgba(50,50,50,.4);
+            transition: all 1s ease;
+        }
+       #container img:first-child {
+            transform: rotate(30deg);
+        }
+       #container img:last-child {
+            transform: rotate(-20deg);
+        }
+        #container img:first-child:hover {   /*只有已经定位的元素才能使用z-index  */
+            transform: scale(1.2);
+            z-index:1;
+            box-shadow: 20px 20px 10px rgba(50, 50, 50, .4);
+        }
+        #container img:last-child:hover {
+            transform: scale(1.2);
+            box-shadow: 20px 20px 10px rgba(50, 50, 50, .4);
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <img src="img01.jpg" alt="">
+        <img src="img02.jpg" alt="">
+
+    </div>
+</body>
+</html>

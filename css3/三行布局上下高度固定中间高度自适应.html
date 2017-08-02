@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        #top,#footer {
+            height: 200px;
+            background: red;
+            position: fixed;
+            width: 100%;
+
+        }
+        #top {
+            top: 0;
+        }
+        #footer {
+            bottom: 0;
+        }
+        #center {
+            background: #ccc;
+            position: absolute;
+            top: 200px;
+            bottom: 200px;
+            left: 0;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="top">top</div>
+    <div id="center">center</div>
+    <div id="footer">footer</div>
+</body>
+</html>

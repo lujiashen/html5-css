@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        #left {
+            width: 200px;
+            height: 400px;
+            background: red;
+
+        }
+        #right {
+            height: 400px;
+            background: green;
+            flex-grow: 1;
+            margin-left: 10px;
+        }
+        #main {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="left"></div>
+        <div id="right"></div>
+    </div>
+
+</body>
+</html>

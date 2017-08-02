@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *  {
+            padding: 0;
+            margin: 0;
+        }
+        #div1 {
+            -webkit-text-shadow:10px 10px 1px,rgba(255,0,0 ,0.5);
+        }
+        #div2 {
+            width: 200px;
+            border: 1px solid black;
+            white-space: nowrap; /*文本不会换行直到遇到<br>为止*/
+            overflow: hidden;/*溢出隐藏*/
+            text-overflow: ellipsis;/*当文本溢出时包含元素时发生的事*/
+
+        }
+        #div2:hover {
+            idth: 200px;
+            border: 1px solid black;
+            overflow: visible;
+            text-overflow: inherit;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">我是芦家申!!</div>
+    <div id="div2">qweetreiwgfuorhiwhglkwAHGIBWNIOWBN</div>
+</body>
+</html>

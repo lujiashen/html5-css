@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        div.circle , .circle::after{
+            width: 200px;
+            height: 200px;
+            border: 10px solid black;
+            -webkit-border-radius: 50%;
+            -moz-border-radius:50%;
+            -ms-border-radius:50%;
+            -o-border-radius:50%;
+            border-radius: 50%;
+            position: absolute;
+        }
+        div.blue {
+            top: 0;
+            left: 0;
+            border-color: blue;
+        }
+        div.blue::after {
+            content: "";
+            top: -10px;
+            left: -10px;
+            border-color: blue;
+            z-index: 1;
+            border-bottom-color: transparent;
+        }
+        div.black {
+            top: 0;
+            left: 230px;
+            border-color: black;
+        }
+        div.black::after {
+            top: -10px;
+            left: -10px;
+            content: "";
+            border-color: black;
+            z-index: 1;
+            border-left-color: transparent;
+        }
+        div.red {
+            border-color: red;
+            top: 0;
+            left: 460px;
+        }
+        div.red::after {
+            top: -10px;
+            left: -10px;
+            content: "";
+            border-color: red;
+            z-index: 2;
+            border-left-color: transparent;
+        }
+        div.yellow {
+            border-color:yellow;
+            top: 110px;
+            left: 115px;
+        }
+        div.yellow::after {
+            top: -10px;
+            left: -10px;
+            content: "";
+            border-color: yellow;
+
+        }
+        div.green {
+            top: 110px;
+            left: 345px;
+            border-color: green;
+        }
+        div.green::after {
+            top: -10px;
+            left: -10px;
+            content: "";
+            border-color: green;
+            z-index: 1;
+            border-top-color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <div class="circle blue"></div>
+    <div class="circle black"></div>
+    <div class="circle red"></div>
+    <div class="circle yellow"></div>
+    <div class="circle green"></div>
+</body>
+</html>

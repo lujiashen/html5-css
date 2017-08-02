@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        #menu li {
+            padding: 0 20px;
+            list-style: none;
+            background: red;
+            color: white;
+            float: left;
+            text-align: center;
+            line-height: 50px;
+            border-right: 2px solid yellow;
+            position: relative;
+        }
+        #contain {
+            width: 700px;
+            margin: 0 auto;
+        }
+        #contain li ul {
+            position: absolute;
+            left: 0;
+            top: 50px;
+        }
+        #contain li ul li {
+            background: #ff9900;
+            transition: all .3s;
+            opacity: 0;
+            float: none;
+        }
+        #contain li ul li:nth-of-type(1n) {
+            transform: translate3d(100%,0,0);
+        }
+        #contain li ul li:nth-of-type(2n) {
+            transform: translate3d(-100%,0,0);
+        }
+        #contain li:hover ul li{
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+        }
+
+    </style>
+</head>
+<body>
+    <div id="contain">
+        <ul id="menu">
+            <li class="one">html
+                <ul class="submenu">
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                </ul>
+            </li>
+            <li class="two">css
+                <ul class="submenu">
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                </ul>
+            </li>
+            <li class="three">javascript
+                <ul class="submenu">
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                </ul>
+            </li>
+            <li class="four">jquery
+                <ul class="submenu">
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                </ul>
+            </li>
+            <li class="five"> react
+                <ul class="submenu">
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                </ul>
+            </li>
+
+        </ul>
+
+    </div>
+
+</body>
+</html>
